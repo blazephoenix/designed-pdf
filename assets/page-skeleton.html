@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+/* Point these at the bundled fonts. Either copy assets/fonts next to this file
+   (so the relative paths below work) or use absolute paths to the skill's
+   assets/fonts directory. */
+@font-face{font-family:'Display';src:url('fonts/SpaceGrotesk.ttf');font-weight:300 700;}
+@font-face{font-family:'Body';src:url('fonts/Inter.ttf');font-weight:100 900;}
+@font-face{font-family:'Mono';src:url('fonts/SpaceMono-Regular.ttf');font-weight:400;}
+@font-face{font-family:'Mono';src:url('fonts/SpaceMono-Bold.ttf');font-weight:700;}
+
+:root{
+  --base:#0A1826; --ink:#0A1826; --paper:#F4F7F5;
+  --accent:#1FE3A4; --wash:#E6FAF2;
+  --muted-dark:#8A9DAD; --muted-light:#5C6C74;
+  --line-dark:rgba(255,255,255,.10); --line-light:#E4E9E7;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;}
+body{font-family:'Body',sans-serif;}
+
+/* one .page per output page — MUST match the --width/--height you render with */
+.page{position:relative;width:1080px;height:1350px;overflow:hidden;
+  padding:104px 96px 132px;display:flex;flex-direction:column;}
+.dark{background:var(--base);color:var(--paper);}
+.light{background:var(--paper);color:var(--ink);}
+.accent{background:var(--accent);color:var(--ink);}
+
+.kicker{font-family:'Mono';font-size:18px;letter-spacing:.30em;text-transform:uppercase;
+  font-weight:700;display:flex;align-items:center;gap:16px;}
+.kicker .tick{width:30px;height:3px;background:var(--accent);}
+.dark .kicker{color:var(--accent);}
+h1{font-family:'Display';font-weight:600;letter-spacing:-.02em;line-height:1.04;font-size:72px;}
+.center{margin:auto 0;}   /* vertical-center a content block in the free space */
+
+.foot{position:absolute;left:96px;right:96px;bottom:56px;display:flex;
+  justify-content:space-between;align-items:center;font-family:'Mono';font-size:16px;
+  letter-spacing:.18em;text-transform:uppercase;padding-top:22px;}
+.dark .foot{color:var(--muted-dark);border-top:1px solid var(--line-dark);}
+.light .foot{color:var(--muted-light);border-top:1px solid var(--line-light);}
+.prog{position:absolute;left:0;bottom:0;height:5px;background:var(--accent);}
+</style>
+</head>
+<body>
+
+<section class="page dark">
+  <div class="kicker"><span class="tick"></span>Eyebrow label</div>
+  <div class="center">
+    <h1>Headline goes here, set big and tight.</h1>
+  </div>
+  <div class="foot"><span>Brandmark</span><span>01 / 03</span></div>
+  <div class="prog" style="width:33%"></div>
+</section>
+
+<!-- duplicate <section class="page ..."> for each additional page -->
+
+</body>
+</html>

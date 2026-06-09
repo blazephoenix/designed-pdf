@@ -1,0 +1,4 @@
+Bundled typefaces (Space Grotesk, Inter, Space Mono) are licensed under the
+SIL Open Font License 1.1, retrieved from the Google Fonts project
+(github.com/google/fonts). They may be embedded and redistributed under the OFL.
+These are sensible defaults; swap in other OFL fonts per the brief.
